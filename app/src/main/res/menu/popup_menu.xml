@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/favorite"
+        android:title="@string/favorite"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/details"
         android:title="@string/details"
         app:showAsAction="never" />
@@ -10,8 +14,8 @@
         android:id="@+id/share"
         android:title="@string/share_video"
         app:showAsAction="never" />
-    <item android:id="@+id/delete"
+    <item
+        android:id="@+id/delete"
         android:title="@string/delete_from_device"
-        app:showAsAction="never"
-        />
+        app:showAsAction="never" />
 </menu>

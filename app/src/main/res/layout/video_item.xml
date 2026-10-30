@@ -4,62 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:background="?attr/selectableItemBackground">
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    android:background="@drawable/bg_card_rounded"
+    android:foreground="?attr/selectableItemBackground"
+    android:padding="10dp">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.30" />
+        app:layout_constraintGuide_percent="0.32" />
 
+    <!-- Video Thumbnail -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/img_video"
         style="@style/ImageViewStyle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="H,1.5:1"
+        app:layout_constraintDimensionRatio="H,1.4:1"
         app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/txt_name"
-        style="@style/TextStyle"
-        android:ellipsize="end"
-        android:gravity="center_vertical"
-        android:maxLines="3"
-        android:layout_marginStart="8dp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn_more_option"
-        app:layout_constraintStart_toEndOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Video Name" />
-
+    <!-- Duration Pill Badge -->
     <TextView
         android:id="@+id/txt_duration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="3dp"
-        android:background="@color/black"
-        android:padding="2dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/bg_pill_badge"
         android:textColor="@color/white"
-        android:textSize="12sp"
+        android:textSize="11sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/img_video"
-        app:layout_constraintEnd_toEndOf="@+id/img_video"
-        tools:text="2:00" />
+        app:layout_constraintEnd_toEndOf="@id/img_video"
+        tools:text="12:45" />
 
+    <!-- Video Title -->
+    <TextView
+        android:id="@+id/txt_name"
+        style="@style/TextStyle"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txt_subtitle"
+        app:layout_constraintEnd_toStartOf="@id/btn_favorite"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sample High Quality Video" />
+
+    <!-- Subtitle (Size + Resolution) -->
+    <TextView
+        android:id="@+id/txt_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_muted"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_favorite"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        tools:text="245 MB • 1920x1080" />
+
+    <!-- Favorite Quick Action -->
+    <ImageView
+        android:id="@+id/btn_favorite"
+        style="@style/IconButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:contentDescription="@string/favorite"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_more_option"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_favorite_border" />
+
+    <!-- 3-Dots More Options Menu -->
     <ImageView
         android:id="@+id/btn_more_option"
         style="@style/IconButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:contentDescription="@string/more_option"
-        android:padding="8dp"
+        android:padding="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_name"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_more" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

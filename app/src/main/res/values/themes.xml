@@ -1,16 +1,28 @@
-<resources>
-    <!-- Base application theme. -->
-    <style name="Theme.KVPlayer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/red_500</item>
-        <item name="colorPrimaryVariant">@color/red_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/red_500</item>
-        <item name="colorSecondaryVariant">@color/red_700</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base Application Theme for NMPLAYER -->
+    <style name="Theme.NMPLAYER" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+
+        <!-- Background & Surface -->
+        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSurface">@color/surface_dark</item>
+
+        <!-- Status & Navigation bars -->
+        <item name="android:statusBarColor">@color/bg_dark</item>
+        <item name="android:navigationBarColor">@color/bg_dark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
+
+    <!-- Legacy alias to avoid breaking references -->
+    <style name="Theme.KVPlayer" parent="Theme.NMPLAYER" />
 
     <style name="Style.App.circleImageView" parent="">
         <item name="shapeAppearance">@style/ShapeAppearanceOverlay.App.circleImageView</item>
@@ -18,18 +30,19 @@
 
     <style name="ShapeAppearanceOverlay.App.circleImageView" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">10%</item>
+        <item name="cornerSize">12dp</item>
     </style>
 
     <style name="TextStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="TextStyle.Grey">
-        <item name="android:textColor">?attr/colorControlNormal</item>
+        <item name="android:textColor">@color/text_muted</item>
+        <item name="android:textSize">12sp</item>
     </style>
 
     <style name="TextStyle.Bold">
@@ -37,20 +50,21 @@
     </style>
 
     <style name="TextStyle.HeadLine">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="IconButton">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">?attr/actionBarItemBackground</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
     </style>
 
     <style name="ImageViewStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
-        <item name="layout_constraintDimensionRatio">H,1:1</item>
+        <item name="layout_constraintDimensionRatio">H,16:9</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.circleImageView</item>
     </style>
