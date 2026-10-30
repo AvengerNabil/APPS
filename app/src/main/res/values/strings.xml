@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">NMPLAYER</string>
+    <string name="launcher_name">NMPLAYER</string>
+    <string name="app_tagline">Next-Gen Media Experience</string>
+
+    <!-- Navigation Tabs -->
+    <string name="tab_folders">Folders</string>
+    <string name="tab_all_videos">All Videos</string>
+    <string name="tab_history">History &amp; Favs</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- General Actions -->
+    <string name="delete_from_device">Delete from Device</string>
+    <string name="share_video">Share Video</string>
+    <string name="details">Properties</string>
+    <string name="file_provider">com.nmplayer.video.fileprovider</string>
+    <string name="more_option">More options</string>
+    <string name="location">Location</string>
+    <string name="file_name">File Name</string>
+    <string name="length">Length</string>
+    <string name="resolution">Resolution</string>
+    <string name="format">Format</string>
+    <string name="size">Size</string>
+    <string name="ok">OK</string>
+    <string name="next">Next</string>
+    <string name="forward_10sec">Forward 10s</string>
+    <string name="play">Play</string>
+    <string name="backward_10sec">Backward 10s</string>
+    <string name="previous">Previous</string>
+    <string name="back">Back</string>
+    <string name="screen_rotation">Screen Rotation</string>
+    <string name="full_screen">Full Screen</string>
+    <string name="audio_track">Audio Track</string>
+    <string name="mute">Mute</string>
+    <string name="sub_title">Subtitles</string>
+    <string name="lock">Lock Controls</string>
+    <string name="unlock">Unlock Controls</string>
+    <string name="delete_video_title">Delete Video</string>
+    <string name="delete_video_msg">Are you sure you want to delete this video from device storage?</string>
+    <string name="delete">Delete</string>
+    <string name="Cancel">Cancel</string>
+    <string name="sharing_file">Sharing %s</string>
+    <string name="date">Date</string>
+    <string name="total_videos">%s videos</string>
+    <string name="subtitle_on">Subtitles turned on</string>
+    <string name="subtitle_off">Subtitles turned off</string>
+    <string name="no_recently_video_found">No recently played videos found</string>
+    <string name="no_videos_found">No videos found on device</string>
+    <string name="search">Search</string>
+    <string name="search_video">Search videos...</string>
+    <string name="select_language">Select Audio Track</string>
+    <string name="default_language">Default Audio</string>
+    <string name="select_subtitle">Select Subtitle Track</string>
+    <string name="off_subtitle">Off (No Subtitles)</string>
+    <string name="item_selected">%s selected</string>
+
+    <!-- NMPLAYER Enhanced Features -->
+    <string name="resume_video">Resume Watching</string>
+    <string name="playback_speed">Playback Speed</string>
+    <string name="aspect_ratio">Aspect Ratio</string>
+    <string name="aspect_fit">Fit to Screen</string>
+    <string name="aspect_fill">Fill Screen (Crop)</string>
+    <string name="aspect_zoom">Zoom</string>
+    <string name="pip_mode">Picture-in-Picture</string>
+    <string name="favorite">Favorite</string>
+    <string name="unfavorite">Remove Favorite</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="clear_history">Clear History</string>
+    <string name="history_cleared">Playback history cleared</string>
+    <string name="empty_history">No watch history yet</string>
+    <string name="empty_favorites">No favorite videos yet</string>
+
+    <!-- Settings & About -->
+    <string name="settings_theme">App Theme</string>
+    <string name="theme_dark">Dark Mode (OLED)</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_system">System Default</string>
+    <string name="settings_playback">Playback Preferences</string>
+    <string name="settings_default_speed">Default Playback Speed</string>
+    <string name="settings_about">About NMPLAYER</string>
+    <string name="about_nmplayer">About NMPLAYER</string>
+    <string name="app_version">Version 1.0.0 (Release)</string>
+    <string name="app_description">NMPLAYER is a high-performance Android video player engineered with Media3/ExoPlayer architecture, gesture controls, subtitle rendering, multi-audio tracking, and offline-first cloud synchronization.</string>
+</resources>

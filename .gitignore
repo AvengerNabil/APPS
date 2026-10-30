@@ -1,0 +1,46 @@
+## Android / Gradle
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+## APK / AAB output (handled in releases/ folder instead)
+*.apk
+*.aab
+!releases/*.apk
+
+## Signing / Keystore — NEVER commit
+*.jks
+*.keystore
+keystore.properties
+
+## Firebase secrets
+google-services.json
+
+## Proguard generated
+*.pro
+
+## Android Studio Navigation Editor temp
+.navigation/
+
+## NDK
+obj/
+
+## IntelliJ IDEA / Android Studio
+*.idea/
+*.ipr
+*.iws
+
+## Gradle wrapper jar (optional, keep gradlew scripts)
+gradle/wrapper/gradle-wrapper.jar
+
+## OS generated
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

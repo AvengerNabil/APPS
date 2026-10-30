@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/folderFragment">
+
+    <fragment
+        android:id="@+id/folderFragment"
+        android:name="com.nmplayer.video.ui.fragments.FolderFragment"
+        android:label="Folders"
+        tools:layout="@layout/fragment_folder">
+        <action
+            android:id="@+id/action_folderFragment_to_videoFragment"
+            app:destination="@id/videoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_folderFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.nmplayer.video.ui.fragments.VideoFragment"
+        android:label="{folderName}"
+        tools:layout="@layout/fragment_video">
+        <action
+            android:id="@+id/action_videoFragment_to_playerFragment"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="folderId"
+            app:argType="long" />
+        <argument
+            android:name="folderName"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.nmplayer.video.ui.fragments.PlayerFragment"
+        android:label=""
+        tools:layout="@layout/fragment_player">
+        <argument
+            android:name="folderId"
+            app:argType="long" />
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="video"
+            app:argType="com.nmplayer.video.model.Video" />
+    </fragment>
+</navigation>

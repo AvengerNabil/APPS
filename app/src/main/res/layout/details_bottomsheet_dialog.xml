@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="8dp">
+
+        <TextView
+            android:id="@+id/txt_dialog_title"
+            style="@style/TextStyle.HeadLine"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/details"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/dialog_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+
+        <TextView
+            android:id="@+id/txt_path_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="16dp"
+            android:text="@string/location"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_dialog_title" />
+
+        <TextView
+            android:id="@+id/txt_path"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_path_label"
+            tools:text="File Path" />
+
+        <TextView
+            android:id="@+id/txt_name_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="8dp"
+            android:text="@string/file_name"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="@id/txt_path_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_path" />
+
+        <TextView
+            android:id="@+id/txt_name"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_name_label"
+            tools:text="File Name" />
+
+        <TextView
+            android:id="@+id/txt_duration_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="8dp"
+            android:text="@string/length"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="@id/txt_path_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_name" />
+
+        <TextView
+            android:id="@+id/txt_duration"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_duration_label"
+            tools:text="Length" />
+
+        <TextView
+            android:id="@+id/txt_resolution_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="8dp"
+            android:text="@string/resolution"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="@id/txt_path_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_duration" />
+
+        <TextView
+            android:id="@+id/txt_resolution"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_resolution_label"
+            tools:text="Resolution" />
+
+        <TextView
+            android:id="@+id/txt_format_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="8dp"
+            android:text="@string/format"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="@id/txt_path_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_resolution" />
+
+        <TextView
+            android:id="@+id/txt_format"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_format_label"
+            tools:text="Format" />
+
+        <TextView
+            android:id="@+id/txt_size_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="8dp"
+            android:text="@string/size"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="@id/txt_path_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_format" />
+
+        <TextView
+            android:id="@+id/txt_size"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_size_label"
+            tools:text="File Size " />
+
+        <TextView
+            android:id="@+id/txt_date_label"
+            style="@style/TextStyle.Bold"
+            android:layout_marginTop="8dp"
+            android:text="@string/date"
+            app:layout_constraintEnd_toStartOf="@id/dialog_guideline"
+            app:layout_constraintStart_toStartOf="@id/txt_path_label"
+            app:layout_constraintTop_toBottomOf="@+id/txt_size" />
+
+        <TextView
+            android:id="@+id/txt_date"
+            style="@style/TextStyle.Grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/dialog_guideline"
+            app:layout_constraintTop_toTopOf="@id/txt_date_label"
+            tools:text="Date" />
+
+        <View
+            android:layout_width="1600dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_ok"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@string/ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_date" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
